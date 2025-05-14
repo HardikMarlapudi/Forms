@@ -1,0 +1,79 @@
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form Container */
+form {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Labels and Inputs */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+    border-color: #5bc0de;
+    outline: none;
+}
+
+/* Gender Section */
+.gender {
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+form .gender label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
