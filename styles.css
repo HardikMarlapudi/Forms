@@ -51,16 +51,6 @@ form input[type="email"]:focus {
     color: #444;
 }
 
-form .gender label {
-    display: inline-block;
-    margin-right: 20px;
-    font-weight: normal;
-}
-
-input[type="radio"] {
-    margin-right: 5px;
-}
-
 /* Button */
 button {
     width: 100%;
