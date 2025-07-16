@@ -1,0 +1,8 @@
+footer {
+   display: block;
+   text-align: center;
+   position: relative;
+   padding: 10px 50px;
+   font-weight: bold;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

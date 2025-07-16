@@ -1,0 +1,167 @@
+* {
+  background-color: azure;
+}
+
+#title {
+  display: block;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+}
+
+#firstName {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#firstNameBox {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#lastName {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#lastNameBox {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#email {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#emailBox {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#phoneNumber {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#phoneNumberBox {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#address {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#addressBox {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+#city {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#cityBox {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#state {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#stateBox {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#zipCode {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#zipCodeBox {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#country {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#countryBox {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitBtn {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#submitBtn:hover {
+  background-color: lightgreen;
+}
+
+#resetBtn {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#resetBtn:hover {
+  background-color: darkred;
+}
