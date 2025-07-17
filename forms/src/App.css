@@ -1,0 +1,123 @@
+/* Reset and Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: azure;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container for Form */
+.form-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Title */
+#title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Label Styling */
+label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+  display: block;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="email"],
+input[type="genderInput"],
+input[type="tel"],
+input[type="number"] {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 14px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+input:hover {
+  border-color: #0078d7;
+  box-shadow: 1px 1px 6px rgba(0, 120, 215, 0.3);
+}
+
+/* Button Styling */
+#submitBtn,
+#resetBtn {
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  margin: 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+  width: 100%;
+  max-width: 240px;
+  text-align: center;
+}
+
+#submitBtn {
+  background-color: #28a745;
+}
+
+#submitBtn:hover {
+  background-color: #0dd538;
+}
+
+#resetBtn {
+  background-color: #dc3545;
+}
+
+#resetBtn:hover {
+  background-color: #e5120b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  #title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+  label {
+    font-size: 0.95rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="genderInput"],
+  input[type="tel"],
+  input[type="number"] {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  #submitBtn,
+  #resetBtn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    max-width: 100%;
+  }
+}

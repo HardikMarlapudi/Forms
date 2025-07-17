@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import './App.css'
 import './index.css';
-import Footer from './Footer.jsx';
-import "./Footer.css";
 
 function App() {
   const [firstNameBox, setFirstNameBox] = useState("");
   const [lastNameBox, setLastNameBox] = useState("");
+  const [genderInput, setgenderInput] = useState(["Male", "Female", "Other", "Prefer not to say"]);
   const [emailBox, setEmailBox] = useState("");
   const [phoneNumberBox, setphoneNumberBox] = useState("");
   const [addressBox, setAddressBox] = useState("");
@@ -20,12 +19,37 @@ function App() {
     if(!firstNameBox) {
       alert("Please enter your First Name!!!");
       return;
-    } 
+    } else if(!lastNameBox) {
+      alert("Please enter your Last Name!!!");
+      return;
+    } else if(!emailBox) {
+      alert("Please enter your email!!!");
+      return;
+    } else if(!phoneNumberBox) {
+      alert("Please enter your phone number!!!");
+      return;
+    } else if(!addressBox) {
+      alert("Please enter your address!!!");
+      return;
+    } else if(!cityBox) {
+      alert("Please enter your city!!!");
+      return;
+    } else if(!stateBox) {
+      alert("Please enter your state!!!");
+      return;
+    } else if(!zipCodeBox) {
+      alert("Please enter your zip code!!!");
+      return;
+    } else if(!countryBox) {
+      alert("Please enter your country!!!");
+      return;
+    }
 
     event.preventDefault();
     console.log("First Name: " + firstNameBox);
     console.log("Last Name: " + lastNameBox);
     console.log("Email: " + emailBox);
+    console.log("Gender: " + genderInput);
     console.log("Phone number: " + phoneNumberBox);
     console.log("Address: " + addressBox);
     console.log("City: " + cityBox);
@@ -37,6 +61,7 @@ function App() {
   const handleReset = () => {
     setFirstNameBox("");
     setLastNameBox("");
+    setgenderInput("");
     setEmailBox("");
     setphoneNumberBox("");
     setAddressBox("");
@@ -54,6 +79,13 @@ function App() {
     <input type="text" id="firstNameBox" value={firstNameBox} onChange={(e) => setFirstNameBox(e.target.value)} />
     <p id="lastName">Last Name: </p>
     <input type="text" id="lastNameBox" value={lastNameBox} onChange={(e) => setLastNameBox(e.target.value)} />
+    <p id="gender">Gender: </p>
+    <select id="genderInput" value={genderInput} onChange={(e) => setgenderInput(e.target.value)}>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+      <option value="Prefer not to Say">Prefer not to Say</option>
+    </select>
     <p id="email">Email: </p>
     <input type="text" id="emailBox" value={emailBox} onChange={(e) => setEmailBox(e.target.value)} />
     <p id="phoneNumber">Phone Number: </p>
