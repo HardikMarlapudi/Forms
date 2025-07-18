@@ -22,26 +22,29 @@ function App() {
     } else if(!lastNameBox) {
       alert("Please enter your Last Name!!!");
       return;
+    } else if(!genderInput) {
+      alert("Please enter your Gender!!!");
+      return;
     } else if(!emailBox) {
-      alert("Please enter your email!!!");
+      alert("Please enter your Email!!!");
       return;
     } else if(!phoneNumberBox) {
-      alert("Please enter your phone number!!!");
+      alert("Please enter your Phone Number!!!");
       return;
     } else if(!addressBox) {
-      alert("Please enter your address!!!");
+      alert("Please enter your Address!!!");
       return;
     } else if(!cityBox) {
-      alert("Please enter your city!!!");
+      alert("Please enter your City!!!");
       return;
     } else if(!stateBox) {
-      alert("Please enter your state!!!");
+      alert("Please enter your State!!!");
       return;
     } else if(!zipCodeBox) {
-      alert("Please enter your zip code!!!");
+      alert("Please enter your Zip Code!!!");
       return;
     } else if(!countryBox) {
-      alert("Please enter your country!!!");
+      alert("Please enter your Country!!!");
       return;
     }
 
@@ -81,6 +84,7 @@ function App() {
     <input type="text" id="lastNameBox" value={lastNameBox} onChange={(e) => setLastNameBox(e.target.value)} />
     <p id="gender">Gender: </p>
     <select id="genderInput" value={genderInput} onChange={(e) => setgenderInput(e.target.value)}>
+      <option value=""></option>
       <option value="male">Male</option>
       <option value="female">Female</option>
       <option value="other">Other</option>
