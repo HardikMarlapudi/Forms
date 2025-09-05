@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import './App.css'
-import './index.css';
+import "./form.css";
 
 function App() {
   const [firstNameBox, setFirstNameBox] = useState("");
@@ -15,38 +14,6 @@ function App() {
   const [countryBox, setCountryBox] = useState("");
 
   const handleSubmit = (event) => {
-
-    if(!firstNameBox) {
-      alert("Please enter your First Name!!!");
-      return;
-    } else if(!lastNameBox) {
-      alert("Please enter your Last Name!!!");
-      return;
-    } else if(!genderInput) {
-      alert("Please enter your Gender!!!");
-      return;
-    } else if(!emailBox) {
-      alert("Please enter your Email!!!");
-      return;
-    } else if(!phoneNumberBox) {
-      alert("Please enter your Phone Number!!!");
-      return;
-    } else if(!addressBox) {
-      alert("Please enter your Address!!!");
-      return;
-    } else if(!cityBox) {
-      alert("Please enter your City!!!");
-      return;
-    } else if(!stateBox) {
-      alert("Please enter your State!!!");
-      return;
-    } else if(!zipCodeBox) {
-      alert("Please enter your Zip Code!!!");
-      return;
-    } else if(!countryBox) {
-      alert("Please enter your Country!!!");
-      return;
-    }
 
     event.preventDefault();
     console.log("First Name: " + firstNameBox);
@@ -79,11 +46,11 @@ function App() {
     <h1 id="title">Forms Application</h1>
     <form onSubmit={handleSubmit} onReset={handleReset}>
     <p id="firstName">First Name: </p>
-    <input type="text" id="firstNameBox" value={firstNameBox} onChange={(e) => setFirstNameBox(e.target.value)} />
+    <input type="text" id="firstNameBox" value={firstNameBox} onChange={(e) => setFirstNameBox(e.target.value)} required />
     <p id="lastName">Last Name: </p>
-    <input type="text" id="lastNameBox" value={lastNameBox} onChange={(e) => setLastNameBox(e.target.value)} />
+    <input type="text" id="lastNameBox" value={lastNameBox} onChange={(e) => setLastNameBox(e.target.value)} required />
     <p id="gender">Gender: </p>
-    <select id="genderInput" value={genderInput} onChange={(e) => setgenderInput(e.target.value)}>
+    <select id="genderInput" value={genderInput} onChange={(e) => setgenderInput(e.target.value)} required >
       <option value=""></option>
       <option value="male">Male</option>
       <option value="female">Female</option>
@@ -91,19 +58,19 @@ function App() {
       <option value="Prefer not to Say">Prefer not to Say</option>
     </select>
     <p id="email">Email: </p>
-    <input type="text" id="emailBox" value={emailBox} onChange={(e) => setEmailBox(e.target.value)} />
+    <input type="text" id="emailBox" value={emailBox} onChange={(e) => setEmailBox(e.target.value)} required />
     <p id="phoneNumber">Phone Number: </p>
-    <input type="text" id="phoneNumberBox" value={phoneNumberBox} onChange={(e) => setphoneNumberBox(e.target.value)} />
+    <input type="text" id="phoneNumberBox" value={phoneNumberBox} onChange={(e) => setphoneNumberBox(e.target.value)} required />
     <p id="address">Address: </p>
-    <input type="text" id="addressBox" value={addressBox} onChange={(e) => setAddressBox(e.target.value)} />
+    <input type="text" id="addressBox" value={addressBox} onChange={(e) => setAddressBox(e.target.value)} required />
     <p id="city">City: </p>
-    <input type="text" id="cityBox" value={cityBox} onChange={(e) => setCityBox(e.target.value)} />
+    <input type="text" id="cityBox" value={cityBox} onChange={(e) => setCityBox(e.target.value)} required />
     <p id="state">State: </p>
-    <input type="text" id="stateBox" value={stateBox} onChange={(e) => setStateBox(e.target.value)} />
+    <input type="text" id="stateBox" value={stateBox} onChange={(e) => setStateBox(e.target.value)} required />
     <p id="zipCode">Zip Code: </p>
-    <input type="text" id="zipCodeBox" value={zipCodeBox} onChange={(e) => setzipCodeBox(e.target.value)} />
+    <input type="text" id="zipCodeBox" value={zipCodeBox} onChange={(e) => setzipCodeBox(e.target.value)} required />
     <p id="country">Country: </p>
-    <input type="text" id="countryBox" value={countryBox} onChange={(e) => setCountryBox(e.target.value)} />
+    <input type="text" id="countryBox" value={countryBox} onChange={(e) => setCountryBox(e.target.value)} required />
     <br></br>
     <br></br>
     <button type="submit" id="submitBtn" onSubmit={handleSubmit}>Submit</button>
