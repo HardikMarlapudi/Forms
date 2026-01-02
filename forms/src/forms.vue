@@ -1,9 +1,7 @@
 <template>
     <h2 id="title">Forms Application</h2>
-    <pre>{{JSON.stringify(formValues, null, 2)}}</pre>
 
-<form @submit="submitForm" @clear="clearForm">
-
+<form @submit="submitForm">
     <h4 id="firstNameTag">First Name: </h4>
     <center><input type="text" id="firstName" placeholder="First Name..." v-model="formValues.firstName" required></center>
 
@@ -37,11 +35,9 @@
         <center><input type="text" id="zipCodeInput" v-model="formValues.zipCode" placeholder="Zip Code..." required></center>
 
         <center><button id="submitForm">Submit</button></center>
-        <center><button id="clearForm">Clear</button></center>
+        <center><button id="clearForm" type="button" @click="clearForm">Clear</button></center>
 </form>
-
 </template>
-
 
 <script>
     export default {
@@ -57,188 +53,105 @@
                     city: '',
                     state: '',
                     zipCode: '',
-                }
-            }
+                },
+            };
         },
         methods: {
             submitForm(event) {
                 event.preventDefault();
                 console.log('formValues', this.formValues);
             },
-        }
-    }
+            clearForm() {
+                this.formValues = {
+                    firstName: '',
+                    lastname: '',
+                    email: '',
+                    gender: '',
+                    calendar: '',
+                    address: '',
+                    city: '',
+                    state: '',
+                    zipCode: '',
+                };
+            },
+        },
+    };
 
 </script>
 
 <style scoped>
+    
+    * {
+        font-family:'Courier New', Courier, monospace;
+    }
 
-    pre {
+    #title,
+    #firstNameTag,
+    #lastNameTag,
+    #emailTag,
+    #genderTag,
+    #male,
+    #female,
+    #dateOfBirth,
+    #address,
+    #city,
+    #state,
+    #zipCode {
         text-align: center;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 15px;
     }
 
     #title {
         font-size: 1.5rem;
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center;
+        margin-bottom: 1rem;
     }
 
-    #firstNameTag {
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
         font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center;
-    }
-    
-    #firstName {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
         width: 50%;
         padding: 5px 10px;
         cursor: pointer;
+        display: block;
+        margin: 0.5rem auto;
     }
-
-    #lastNameTag {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center;
-    }
-
-    #lastName {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        width: 50%;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-
-    #emailTag {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center;
-    }
-
-    #email {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        width: 50%;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-
-    #genderTag {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center;
+    #addressInput,
+    #cityInput,
+    #stateInput,
+    #zipCodeInput,
+    #calendarInput {
+        width: 30%;
     }
 
     #gender {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        cursor: pointer;
-    }
-
-    #male {
-        font-size: 15px;
-        font-family: 'Courier New', Courier, monospace;
         text-align: center;
+        margin: 0.5rem 0;
     }
 
+    #male,
     #female {
         font-size: 15px;
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center;
+        margin: 0 10px;
     }
 
-    #dateOfBirth {
-        text-align: center;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    #calendarInput {
+    #submitForm,
+    #clearForm {
         font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        width: 30%;
-        padding: 5px;
-        cursor: pointer;
-    }
-
-    #address {
-        text-align: center;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    #addressInput {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        width: 30%;
-        padding: 5px;
-        cursor: pointer;
-    }
-
-    #city {
-        text-align: center;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    #cityInput {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        width: 30%;
-        padding: 5px;
-        cursor: pointer;
-    }
-
-    #state {
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center;
-    }
-
-    #stateInput {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        width: 30%;
-        padding: 5px;
-        cursor: pointer;
-    }
-
-    #zipCode {
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center;
-    }
-
-    #zipCodeInput {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        width: 30%;
-        padding: 5px;
+        font-weight: bold;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 10px 20px;
+        color: white;
+        margin: 1rem;
         cursor: pointer;
     }
 
     #submitForm {
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: bold;
-        text-align: center;
-        border: none;
-        border-radius: 0.5rem;
-        padding: 10px 20px;
-        background-color:rgb(32, 239, 5);
-        color: white;
-        margin: 1.5rem;
-        cursor: pointer;
+        background-color: rgb(32, 239, 5);
     }
 
     #clearForm {
-        font-size: 20px;
-        font-family:'Courier New', Courier, monospace;
-        font-weight: bold;
-        border: none;
-        border-radius: 0.5rem;
-        padding: 10px 20px;
         background-color: rgb(239, 5, 5);
-        color: white;
-        cursor: pointer;
     }
 
 </style>
